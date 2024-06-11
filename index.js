@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotEnv from 'dotenv'
 import bodyParser from 'body-parser';
-import router from './routes/tasks2.js';
+import router from './routes/tasks.js';
 
 dotEnv.config()
 const app = express();
