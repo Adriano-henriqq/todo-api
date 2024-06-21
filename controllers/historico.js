@@ -86,3 +86,14 @@ export const updateFinished = (req, res) => {
         return res.status(200).json("finished acao alterada com sucesso!");
     });
 };
+
+export const deleteHistory = (req, res) => {
+    const query = "DELETE FROM pomodoros WHERE `id` = ?";
+
+
+    db.query(query,[req.params.id], (err)=> {
+        if (err) return res.json(err);
+
+        return res.status(200).json("pomodoro removido com sucesso!");
+    })
+}
